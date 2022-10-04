@@ -1,0 +1,78 @@
+:root {
+  --size: 200px;
+  --scale: 1;
+  --rotate: 0deg;
+  background-color: black;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  transform: translate(50%, 50%);
+  position: absolute;
+  background-color: black;
+  z-index: 10;
+}
+.center img {
+  transform: scale(2.5);
+}
+.wheel {
+  transform: translate(calc(-1 * var(--size)), calc(-1 * var(--size)));
+}
+.slice {
+  width: 0px;
+  height: 0px;
+  border-top: var(--size) solid var(--color);
+  border-left: var(--size) solid var(--color);
+  border-top-left-radius: 200px;
+  transform-origin: bottom right;
+  transform: rotate(var(--rotate)) scale(var(--scale));
+  position: absolute;
+  transition: border-color 0.2s, box-shadow 0.05s, transform 0.05s;
+}
+.green {
+  --color: green;
+  --color-light: #11aa11;
+}
+.yellow {
+  --color: yellow;
+  --color-light: #ffff77;
+  --rotate: 270deg;
+}
+.blue {
+  --color: blue;
+  --color-light: #3333ff;
+  --rotate: 180deg;
+}
+.red {
+  --color: red;
+  --color-light: #ff3333;
+  --rotate: 90deg;
+}
+
+.slice:hover {
+  border-top-color: var(--color-light);
+  border-left-color: var(--color-light);
+  box-shadow: 3px 0 30px var(--color-light);
+  z-index: 5;
+}
+.slice:active {
+  box-shadow: 3px 0 40px var(--color-light);
+  --scale: 0.98;
+}
+
+.hover {
+  border-top-color: var(--color-light);
+  border-left-color: var(--color-light);
+  box-shadow: 3px 0 30px var(--color-light);
+  z-index: 5;
+}
