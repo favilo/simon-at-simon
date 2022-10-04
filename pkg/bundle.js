@@ -684,7 +684,7 @@
     }
 
     async function main() {
-       await init('/pkg/yew_wasm_pack_minimal_bg.wasm');
+       await init('/simon-at-simon/pkg/yew_wasm_pack_minimal_bg.wasm');
        run_app();
     }
     main();
