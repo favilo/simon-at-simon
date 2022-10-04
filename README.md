@@ -28,9 +28,13 @@ Note: It's expected behavior for the browser console to display an error similar
 
 If you have become an orthodox Rust person than you can use `see` or `miniserve` servers to share assets:
 
-```
-cargo install see
-see start -b 8080
+<!-- ``` -->
+<!-- cargo install see -->
+<!-- see start -b 8080 -->
+<!-- ``` -->
+
+``` sh
+python -m http.server 8080
 ```
 
 ### 5) Deploy
